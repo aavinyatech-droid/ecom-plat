@@ -1,0 +1,62 @@
+// ECOM-PLAT database design (WAVE 1 me wire hoga — abhi blueprint hai).
+// RULE: har tenant table me storeId mandatory. Query bina storeId = BUG.
+datasource db { provider = "postgresql"; url = env("DATABASE_URL") }
+generator client { provider = "prisma-client-js" }
+
+enum Role { SUPERADMIN STORE_OWNER STAFF }
+enum StoreStatus { TRIAL ACTIVE PAST_DUE SUSPENDED }
+enum OrderStatus { NEW PACKED SHIPPED DELIVERED CANCELLED }
+enum PayMode { UPI COD }
+enum PayStatus { PENDING PAID FAILED REFUNDED }
+enum MsgStatus { NEW REPLIED CLOSED }
+
+model User {
+  id String @id @default(cuid()); name String; email String @unique
+  phone String?; passwordHash String?; role Role @default(STORE_OWNER)
+  memberships StoreMember[]; createdAt DateTime @default(now())
+}
+model Store {
+  id String @id @default(cuid())
+  slug String @unique            // sneha-sarees → sneha-sarees.ecom-plat.com
+  customDomain String? @unique   // shop.snehastyle.com (Brand plan)
+  name String; logo String?; tagline String?
+  themeId String @default("ethnic"); themeConfig Json?   // rang, font, sections
+  status StoreStatus @default(TRIAL); trialEndsAt DateTime?
+  whatsapp String?; upiEnabled Boolean @default(true); codEnabled Boolean @default(true)
+  planId String?; plan Plan? @relation(fields: [planId], references: [id])
+  members StoreMember[]; products Product[]; categories Category[]
+  orders Order[]; customers Customer[]; messages Message[]
+  coupons Coupon[]; integrations Integration[]; payments Payment[]
+  subscriptions Subscription[]
+  createdAt DateTime @default(now()); updatedAt DateTime @updatedAt
+}
+model StoreMember { id String @id @default(cuid()); userId String; storeId String; role Role @default(STAFF); user User @relation(fields: [userId], references: [id]); store Store @relation(fields: [storeId], references: [id]); @@unique([userId, storeId]) }
+model Plan { id String @id @default(cuid()); name String @unique; priceMonthly Int; priceYearly Int; maxProducts Int; txnFeePct Float @default(0); features Json; stores Store[]; subscriptions Subscription[] }
+model Subscription { id String @id @default(cuid()); storeId String; planId String; status String @default("active"); currentPeriodEnd DateTime?; razorpaySubId String?; store Store @relation(fields: [storeId], references: [id]); plan Plan @relation(fields: [planId], references: [id]) }
+model Theme { id String @id; name String; category String; primary String; bg String; font String; layout String; preview String?; config Json?; isActive Boolean @default(true) }
+model Category { id String @id @default(cuid()); storeId String; name String; slug String; store Store @relation(fields: [storeId], references: [id]); products Product[]; @@unique([storeId, slug]) }
+model Product {
+  id String @id @default(cuid()); storeId String; categoryId String?
+  name String; slug String; description String?; price Int; mrp Int?
+  images String[]; variants Json?   // [{size:"M",color:"Red",stock:5}]
+  stock Int @default(0); status String @default("active")
+  store Store @relation(fields: [storeId], references: [id])
+  category Category? @relation(fields: [categoryId], references: [id])
+  items OrderItem[]; createdAt DateTime @default(now()); updatedAt DateTime @updatedAt
+  @@unique([storeId, slug])
+}
+model Customer { id String @id @default(cuid()); storeId String; name String; phone String; email String?; address Json?; store Store @relation(fields: [storeId], references: [id]); orders Order[]; @@unique([storeId, phone]) }
+model Order {
+  id String @id @default(cuid()); storeId String; orderNo String
+  customerId String?; customer Customer? @relation(fields: [customerId], references: [id])
+  items OrderItem[]; amount Int; payMode PayMode; payStatus PayStatus @default(PENDING)
+  status OrderStatus @default(NEW); trackingId String?; notes String?
+  store Store @relation(fields: [storeId], references: [id])
+  payments Payment[]; createdAt DateTime @default(now()); updatedAt DateTime @updatedAt
+  @@unique([storeId, orderNo])
+}
+model OrderItem { id String @id @default(cuid()); orderId String; productId String; qty Int; price Int; variant Json?; order Order @relation(fields: [orderId], references: [id]); product Product @relation(fields: [productId], references: [id]) }
+model Message { id String @id @default(cuid()); storeId String; customerName String; phone String; productId String?; text String; status MsgStatus @default(NEW); store Store @relation(fields: [storeId], references: [id]); createdAt DateTime @default(now()) }
+model Coupon { id String @id @default(cuid()); storeId String; code String; type String; value Int; minOrder Int?; active Boolean @default(true); store Store @relation(fields: [storeId], references: [id]); @@unique([storeId, code]) }
+model Integration { id String @id @default(cuid()); storeId String; provider String; config Json?; isEnabled Boolean @default(false); store Store @relation(fields: [storeId], references: [id]); @@unique([storeId, provider]) }
+model Payment { id String @id @default(cuid()); storeId String; orderId String?; amount Int; provider String; txnId String?; status PayStatus @default(PENDING); store Store @relation(fields: [storeId], references: [id]); order Order? @relation(fields: [orderId], references: [id]); createdAt DateTime @default(now()) }

@@ -6,7 +6,7 @@ Prepared: 13 September 2026
 Scope: commercial websites and e-commerce for SMBs — company strategy, product roadmap, financials, pricing, lock-in, support, and customer sentiment.
 Evidence cut-off: primary sources through Q2 2026 results (Shopify and GoDaddy reported 5 and 30 August 2026; Hostinger FY2025 published 18–23 February 2026) plus investor-conference commentary from 8–10 September 2026.
 
-Citation style: `[H1]`, `[G1]`, `[S1]`, `[X1]` map to the per-company source tables at the end of each section and to `SOURCES.md`. Tier-1 = company/filer/regulator primary source. Everything else is labelled by what it is (review site, transcript relay, Reddit, BBB filing).
+Citation style: `[H1]`, `[G1]`, `[S1]`, `[X1]` map to the per-company source tables at the end of each section, and to `SOURCES.md`, which adds a confidence tier to every entry — **A** company/filer/regulator primary, **B** independent measurement or dated specialist reporting, **C** user-generated (Reddit, Trustpilot, G2, BBB), **D** aggregators and vendor-authored comparisons. Nothing load-bearing rests on C or D.
 
 **Files in this folder**
 
@@ -15,7 +15,7 @@ Citation style: `[H1]`, `[G1]`, `[S1]`, `[X1]` map to the per-company source tab
 | `REPORT.md` | This document — the full write-up |
 | `SWOT-AT-A-GLANCE.md` | Three screens: the whole SWOT grid + who should pick what |
 | `PRICING-TCO.csv` | Every price, renewal rate, fee and TCO scenario, machine-readable |
-| `SOURCES.md` | All ~70 sources with dates and confidence tiers |
+| `SOURCES.md` | 102 numbered sources (~94 URLs) with dates, type and confidence tiers |
 
 ---
 
@@ -543,7 +543,7 @@ US list plans, 2026 `[S12][S28][S29]`:
 
 ## 7. The three recurring failure modes
 
-Across ~70 sources the complaints are not about features. They are about **asymmetries** — and each one is a product decision a competitor could make differently.
+Across 102 numbered sources the complaints are not about features. They are about **asymmetries** — and each one is a product decision a competitor could make differently.
 
 1. **Priced as a trap.** Intro price is a loss-leader; renewal/usage is the profit centre. Hostinger: +250–550% (Premium $1.99→$10.99), AI credits on top. GoDaddy: .com +2,100%, Airo Plus $59.88→$95.88, builder renewal unpublished. Shopify: the 2% gateway penalty + app stacking on a $39 headline. Customer response is measurable: ~75% of reviewers who flagged renewal cancelled; a 4★ review becomes 1★ at renewal across the whole budget-hosting category. `[H10][G11][S12][X7]`
 2. **Account power without appeal.** The platform can suspend, lock or hold, and the operator's data and money are the collateral — and access removal makes the appeal procedurally impossible. Hostinger: one flagged domain suspends all domains and backups are withheld. GoDaddy: a verification-code bug locks a user out of cancelling for 7 days until the auto-renewal fires. Shopify: stores restricted, admin removed so chargeback evidence cannot be filed, funds held 365 days. `[H16][H17][G23][S8]`

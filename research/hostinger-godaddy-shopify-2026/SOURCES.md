@@ -1,154 +1,174 @@
-# Source ledger
+# Source ledger — every claim in `REPORT.md`, with date and confidence tier
 
-Every source used in `REPORT.md`, deduplicated, with date, what it was used for, and a confidence tier.
-Research window: **August–September 2026** (compiled 13 Sept 2026). Prices captured Sept 2026, US list.
+Research window: **August–September 2026**, compiled **13 September 2026**. Prices are US list, captured Sept 2026.
+
+This file is generated from the numbered tables at the end of each company section in `REPORT.md`, so every `[H#]`, `[G#]`, `[S#]` and `[X#]` citation in the report resolves here. It lists **102 numbered source entries** covering roughly **94 distinct URLs**. Where one entry aggregates several sites, the URLs are named inside the row.
 
 ## Confidence tiers
 
-| Tier | Meaning | How to treat it |
+| Tier | What it means | How to treat it |
 |---|---|---|
-| **A** | Primary company record: press release, earnings transcript, SEC filing, official docs, regulator release | Cite directly. Numbers here are the report's spine. |
-| **B** | Independent measurement or dated specialist reporting: Netcraft, CCIC, review-lab tests, trade press | Cite directly where the methodology is stated; note the reviewer when opinions diverge. |
-| **C** | User-generated reports: Reddit, Trustpilot, G2, ConsumerAffairs, BBB, forum threads | Never generalise from a single thread. Used for **patterns** (same complaint, many independent reporters) and always attributed. |
-| **D** | AI-assisted / low-quality aggregators, marketing blogs | Used only for figures they sourced publicly, and only as directional. Not relied on for conclusions. |
+| **A** | Primary company record: press release, earnings materials, SEC exhibit, official docs, regulator release, BBB complaint text | Cite directly. These are the numbers the report's spine is built from. |
+| **B** | Independent measurement or dated specialist reporting: Netcraft, W3Techs, CCIC, hands-on reviewers with methodology, trade press, legal press, transcripts | Cite where the method is stated; where two reviewers disagree, both are named in the report |
+| **C** | User-generated: Reddit, Trustpilot, G2, ConsumerAffairs, Sitejabber, ProductReview, transcript relays | Never generalised from one thread. Used for **patterns** — the same complaint from independent reporters — always attributed |
+| **D** | Aggregators, vendor-authored and affiliate comparison pages, low-rigour blogs | Directional only. Used for figures they clearly sourced publicly; never load-bearing for a conclusion |
 
-**A note on review-platform scores.** Trustpilot, G2, ConsumerAffairs and Sitejabber are self-selected samples with known review-gating and incentivised-review problems; reported counts for the same company differ by platform and by filter (e.g. Hostinger Trustpilot appears at 13.8k and at 61.5k depending on filter). Where a *single* score is quoted it should be treated as indicative, not audited. The report therefore leans on **score patterns across platforms** and on the substance of recurring complaints.
+**Tier mix:** A 14 · B 43 · C 20 · D 25. Every headline financial, launch date and policy claim in the report traces to a tier-A source; tiers C and D are the evidence for *what customers say*, not for what a company owes you.
 
----
+## Two biases to keep in mind
 
-## Hostinger — 24 sources
+1. **Review platforms are self-selected samples** with known review-gating and incentivised-review problems. Reported counts for the same company differ by platform and by filter, so single scores here are indicative, not audited. The report leans on the *pattern across platforms* (e.g. GoDaddy at 4.5★ on Trustpilot vs ~1.2–1.7★ on ConsumerAffairs) rather than on any one number.
+2. **Several comparison sources are written by a competitor.** Hostinger's own blog supplies some Hostinger-vs-rival benchmark claims; several "alternatives" pages are affiliate-monetised. Those rows are kept (they are often the only measurement available) but flagged in-line in `REPORT.md` as self-interested, and their competitor-facing claims — the 66% uptime-gap, the Wix 23.6%-vs-27.2% figure — are explicitly excluded from the conclusions.
 
-| ID | Source | Date | Tier | Used for |
+## Hostinger — 26 sources
+
+| ID | Source (what it was used for) | Type | Date | Tier |
 |---|---|---|---|---|
-| H1 | hostinger.com/blog/financial-results-2025/ | 2026 | A | FY2025 €275.4M (+51%), 4.6M customers, Horizons 800k, Reach 150k, 6× FT1000, #2 Statista long-term growth |
-| H2 | hostinger.com/newsroom (via H1) | 2026 | A | CEO quote "we were built different", 22 years |
-| H3 | hostinger.com/blog/ai-builder-launch/ | 18 Aug 2026 | A | AI Builder = Website Builder + Horizons merged; AI-provisioned auth/DB/storage/email; free Connector for Claude Code & Cursor; plans and credits; Žirgulė "the next battle… what happens next" |
-| H4 | hostinger.com/blog/agent-launch/ | 2 Sept 2026 | A | Hostinger Agent; 91% self-resolution of ~1.5M monthly conversations; 41%→72% specialist guidance; live chat 10%→4.5%; ~3 min vs 50+ min; ~1 in 10 to human "AI CX Engineers"; "5 million clients"; agentic work as a paid tier; Ecommerce launched Jul 2026; Remixable Templates |
-| H5 | unicorns.lt (Lithuanian business press) | 2026 | B | Kodee ≈1.5M conversations/mo, 350+ MCP tasks, >€9M/yr support savings |
-| H6 | webhosting.today | 18 Mar 2026 | B | €11.8M employee option/liquidity payout |
-| H7 | Wikipedia (Hostinger), citing Reuters et al. | 2004–Nov 2025 | B | 2004 Kaunas founding, 2011 rename, 2008 US base, 2021 Nov capital-investment 31% PE, Nov 2025 dividend recap, data centres incl. India, 2015 & 2019 breaches |
-| H8 | netcraft.com | Mar 2015 | B | Hostinger+000webhost ≈90% of Steam phishing sites; ~93% of its hosted domains abusive (methodology: subdomain count) |
-| H9 | ccic.org Domain Abuse Report | 2023 → Apr 2026 | B | Top-5 phishing host in 2023; out of top 5 by Apr 2026 |
-| H10 | max-productive.com | 2026 | B | Premium $2.99→$10.99, Business $3.99→$16.99, +250–311% renewal ranges, entry-process tiers |
-| H11 | checkthat.ai (Hostinger pricing + reviews) | 2026 | D | Renewal multipliers to +550%, ~75% of renewal-flagged reviewers cancelled, 4.7★/13.8k, plan limits, credit packs |
-| H12 | hostscore.io | 2026 | B | Business $3.99→$16.99 (+325%), Cloud $7.99→$25.99 (+226%) |
-| H13 | websitebuilderexpert.com | 2025–26 | B | Horizons tier structure $6.99–$79.99, credit allocation, ZIP export only Hobbyist+, "not cheap long-term" |
-| H14 | allaboutcookies.org | 2026 | B | Refunds default to account credit; renewal-cancellation friction; 96-hour domain window; no phone support |
-| H15 | Hostinger docs/Knowledge Base (SLA, uptime monitoring, refund policy, limits) | 2026 | A | 99.9% network-availability SLA, 5% credit, self-verified monitoring, no builder export |
-| H16 | G2 (Hostinger) | 2026 | C | 4.4★; "support sometimes upsells", onboarding friction, refund expectations |
-| H17 | Reddit r/Wordpress | Apr 2025 | C | "cheap host looks best when the site is still young"; renewals not refundable |
-| H18 | Reddit r/VPS | Dec 2024 | C | VPS throttled at 75% sustained CPU, then 20%; "never use them again" |
-| H19 | Reddit r/sysadmin | 2026 | C | Whole-account suspension, backups refused, "not providing any backup" |
-| H20 | Reddit r/WebsiteBuilder | Apr 2026 | C | Support praised, but "I wouldn't recommend to a business" |
-| H21 | Reddit r/Hostinger + Trustpilot reviews | 2025–26 | C | "AI content plan feels like a trap"; credit exhaustion mid-project; renewal shock |
-| H22 | developer.hashnode.dev (community post) | 2026 | C | "the pricing structure is aggressive… paywalled features they couldn't preview" |
-| H23 | Hostinger business strategy / competitor content (Hostinger-authored) | 2026 | A(bias) | Own positioning vs Lovable/Bolt/Replit/Vercel and pricing gaps; also the source of the 66% vs GoDaddy claim |
-| H24 | Hostinger Newsroom (Wix 23.6% vs 27.2% uptime) | 2026 | A(bias) | Competitor downtime claim — noted as self-interested in the report |
+| H1 | Hostinger blog — "Hostinger posts fourth consecutive year of 50%+ growth" (revenue, customers, Horizons 800k, Reach 150k, FT/Statista) — `hostinger.com/blog/financial-results-2025/` | Primary | 18–23 Feb 2026 | **A** |
+| H2 | webhosting.today — FY2025 growth + USD equivalent — `webhosting.today/2026-02-18/hostinger-reports-51-revenue-growth-in-2025-reaches-e275-4-million/` | Trade | 19 Feb 2026 | **B** |
+| H3 | Hostinger blog — **AI Builder launch** (Žirgulė quote, "agentic era", one project/one account) — `hostinger.com/blog/ai-builder-launch/` | Primary | 18 Aug 2026 | **A** |
+| H4 | Hostinger blog — **Hostinger Agent launch** (91% self-resolution, AI CX Engineers, paid agentic tiers, Ecommerce July 2026, "5 million clients") — `hostinger.com/blog/agent-launch/` | Primary | 2 Sept 2026 | **A** |
+| H5 | Max Productive — Hostinger AI Website Builder hands-on (credits, top-up pricing, export rules, renewals) — `max-productive.ai/ai-tools/hostinger-ai-website-builder/` | Reviewer | 27 Aug 2026 | **B** |
+| H6 | Wikipedia — Hostinger (history, ownership, subsidiaries, breaches, phishing rankings) — `en.wikipedia.org/wiki/Hostinger` | Tertiary | updated Aug 2026 | **B** |
+| H7 | unicorns.lt — Kodee saves >€9M/yr, 350+ tasks over MCP | Trade | 11 Sept 2025 | **B** |
+| H8 | Max Productive — Hostinger Horizons review (plan tiers, credits, Lovable/Bolt comparison) — `max-productive.ai/ai-tools/hostinger-horizons/` | Reviewer | 17 Feb 2026 | **B** |
+| H9 | checkthat.ai — Hostinger reviews summary (renewal 250–550%, support, G2/Trustpilot scores) — `checkthat.ai/brands/hostinger/reviews` | Aggregator | 30 Mar 2026 | **D** |
+| H10 | checkthat.ai — Hostinger pricing, renewals and refund mechanics — `checkthat.ai/brands/hostinger/pricing` | Aggregator | 30 Mar 2026 | **D** |
+| H11 | HostScore — Hostinger review 2026 (cons list, no-export finding, user quotes) — `hostscore.net/review/hostinger/` | Reviewer | 2 Sept 2026 | **B** |
+| H12 | itbrief / itbrief.asia — AI Builder for web apps & sites (backend provisioning, Žirgulė quote) — 19 Aug 2026 | Trade | 19 Aug 2026 | **B** |
+| H13 | Trustpilot — Hostinger reviews + platform summary (suspension, outage, support verbatims) — `trustpilot.com/review/hostinger.com` | Reviews | 5 Sept 2026 | **C** |
+| H14 | r/Hostinger — "Hostinger is limiting the resources of my VPS and I'm losing my clients" — `reddit.com/r/Hostinger/comments/1q8vx5j` | Forum | 10 Jan 2026 | **C** |
+| H15 | r/Hostinger — same thread, corroboration on throttling | Forum | Jan 2026 | **C** |
+| H16 | r/Hostinger — "Developers beware: Hostinger locked my entire hosting account & refused to return client data" — `reddit.com/r/Hostinger/comments/1pdumzi` | Forum | 4 Dec 2025 | **C** |
+| H17 | r/Hostinger — "Your account was suspended permanently" (support refusing backups) — `reddit.com/r/Hostinger/comments/1rcvzn7` | Forum | 23 Feb 2026 | **C** |
+| H18 | r/Hostinger — "Check your renewal cost!!" (unnotified fee, Australian Consumer Act claim) — `reddit.com/r/Hostinger/comments/1t2xqx4` | Forum | 3 May 2026 | **C** |
+| H19 | bearhost — Hostinger review 2026 FAQ (uptime, VPS quality, email, domain, refund nuance) — `bearhost.com/blogs/hostinger-review` | Reviewer | 16 May 2026 | **B** |
+| H20 | allaboutcookies — Hostinger Web Builder review 2026 (4.5★, features score, zero transaction fees) — `allaboutcookies.org/hostinger-review` | Reviewer | 31 Jul 2026 | **B** |
+| H21 | websitebuilderexpert — Hostinger Website Builder / Horizons reviews (plan prices, renewal, complaints) — `websitebuilderexpert.com/website-builders/hostinger-website-builder-review/` | Reviewer | 27 Apr 2026 | **B** |
+| H22 | checkthat.ai brand profile — Remixable Templates marketplace, €182.4M FY2024, Impulso, Niagahoster | Aggregator | 3 Nov 2025 | **D** |
+| H23 | Netcraft (2015) and Cybercrime Information Center (2023) phishing-host rankings, as summarised in `[H6]` | Third-party via Wikipedia | 2015/2023 | **B** |
+| H24 | windowsforum — "Hostinger in 2026: AI-Powered Budget Linux Hosting" (strategy read, gaps: no phone, no Windows, no dedicated) | Trade | 15 Jun 2026 | **B** |
+| H25 | roconpaas — "10 Best Hostinger Alternatives 2026" (comparison table of what Hostinger lacks: SLA, phone, PCI, backups, mailbox caps) | Vendor/affiliate | 21 Aug 2026 | **D** |
+| H26 | onlinemediamasters — hostile but detailed Hostinger review (fake-reviews allegation, 14M breach, 1GB email caps, brand-ambassador criticism) | Reviewer | 9 Jul 2025 | **B** |
 
 ## GoDaddy — 30 sources
 
-| ID | Source | Date | Tier | Used for |
+| ID | Source (what it was used for) | Type | Date | Tier |
 |---|---|---|---|---|
-| G1 | GDDY Q2 2026 Earnings Prepared Remarks PDF (s23.q4cdn.com) | 3 Sept 2026 | A | The strategy spine: Airo unified as "agentic operating system", ABRR $10M→$50M in a quarter "nearly all organic", A/B-tested into domain purchase path, de-emphasis of standalone DIFM/template builders, Developer Platform, ANS in production + Linux Foundation intent, voicebot −16pp, $852M buybacks, Investor Night Dec 2026, Q3 guide |
-| G2 | GDDY Q2 2026 earnings press release (SEC Ex-99.1) | 3 Sept 2026 | A | Revenue $1.298B (+6.6%), ARR $4.421B, A&C $514.8M (+11%) at 46.8% margin, Core $783.2M (+3.9%), FCF $443.5M / $1.73B TTM, ARPU $250, 20.5M customers, retention >85% |
-| G3 | GDDY Q4 2025 earnings call transcript (via fool.com) | 13 Feb 2026 | A | FY2025 revenue $4.951B (+8.3%), A&C $1.889B (+14.3%), NEBITDA $1.586B, FCF $1.599B, ARPU $242, 20.42M customers, FY26 guide $5.215–5.255B, ~200bps .CO drag, >50% multi-product / >70% Airo cohort, 2026 = "year of investment" |
-| G4 | Godaddy.com press release, "GoDaddy Launches Airo.ai" | 13 Nov 2025 | A | First AI platform for entrepreneurs; six-agent suite framing |
-| G5 | 3BL / PR Newswire coverage of Airo launch | 2 Dec 2025 | B | DIFY, "self-service, done-for-you and do-it-with-you", "most complete agentic toolkit", agency-positioning quote |
-| G6 | Godaddy.com Products/News: Airo for WordPress, Web Design AI, AI Business Toolkit, Builder AI 2.0, MyBuilt | 2026 | A | Launch dates and capabilities: 26 Feb 2025, 15 Jul 2025, 17 Sept 2025, 11 May 2026, 25 Jun 2026 |
-| G7 | SEC 10-Q / prior filings (via press releases) | 2024–Q1 2025 | A | Net debt ≈$2.7B / 1.4×; 2024 revenue $4.5B, A&C $1.65B, A&C margin ~44% |
-| G8 | StockAnalysis / Zacks / Benzinga post-earnings coverage | 3 Sept 2026 | B | EPS $1.83 vs $1.69 est.; stock −7.7%; bookings-run-rate commentary |
-| G9 | investing.com (Goldman Sachs Communacopia; Citi 31st Annual Global TMT) | 8–9 Sept 2026 | B | "no need to worry about customers"; domain aftermarket 3–4% with $40M revenue loss; 46% A&C margin, 62% gross, 73% incremental, 1.5% revenue growth, 10% EPS growth |
-| G10 | ftc.gov press release | 15 Jan 2025 | A | FTC action: data-security failures since at least 2021, plaintext stored credentials, 2021 MFA deployment, 2021/2022/2023 incidents |
-| G11 | natlawreview.com / hunton.com (order analysis) | 2025 | A/B | Consent order **finalised 21 May 2025**, 3-0, no monetary penalty, biennial independent assessments from 2026, 20-year programme, "deliberate indifference" language |
-| G12 | fcc.gov / GDDY A-to-Z privacy policy page | 2025–26 | A | Privacy-policy revisions; "not for children under 13" clause; FCC consumer privacy rule history |
-| G13 | checkthat.ai (GoDaddy pricing + Airo reviews) | 2026 | D | .com $4.99→$21.99 (+2135%), builder $9.99→$16.99, Airo Plus $59.88→$95.88, 3–10× renewal multiplier, free tier publishes nothing |
-| G14 | litmustools.com pricing breakdown | 2026 | B | Airo Free/Starter/Pro/Ultimate $0/$9.99/$24.99/$99.99 → $14.99/$36.99/$149.99; 50/150/300/750 credits; Sites 1/1/10/50; annual-billing monthly rate |
-| G15 | tooltester.com (GoDaddy Airo reviews) | 2026 | B | 22,700 reviews 4.4★; "10× faster", "looks like 400,000 other GoDaddy websites", "not a finished product, a prototype" |
-| G16 | themeburn.com | 2025 | B | Refund window cut 30→7 days (Feb 2025) and extended to multi-year renewals; "16% of negative reviews are cancellation complaints"; 4.4→4.3 rating response |
-| G17 | allaboutcookies.org | 2026 | B | Bundled $332.62/yr → $537.62 by yr 4 (+62%); "auto-renewed after opting out"; no code export from Websites + Marketing |
-| G18 | hostadvice.com | 2025–26 | B | 60-minute hold and script answers; support degrades after year 1; long chats end in product recommendation |
-| G19 | Reddit r/webdev (1jv8xez) | 2024–25 | C | 10-year auto-renewal $235/domain; redemption fees ≈$600; cancellation-code lockout for 7 days; dynamic renewal pricing |
-| G20 | Reddit r/sweatystartup | 2024–25 | C | Year-1 $167.39 → year-2 $225.84 (+$100/yr) |
-| G21 | Reddit r/Entrepreneur (1b6028u) | 2025 | C | "GoDaddy sites… no way to export them" |
-| G22 | Reddit r/Trae_ai + Trustpilot | 2025–26 | C | "dark patterns at their worst"; "they do not care about you"; free-plan limits |
-| G23 | Trustpilot (GoDaddy) | 2026 | C | 4.5★ over ~128–134k reviews — the scale of the positive cohort is itself data |
-| G24 | ConsumerAffairs / Sitejabber (GoDaddy) | 2026 | C | 1.2–1.7★ and ~2.8★ — same company, opposite rating; chargebacks and "I can't leave" |
-| G25 | ConsumerAffairs (review-mechanics research) | 2026 | C | Reported "bad reviews get deleted" pattern; incentive-review programme |
-| G26 | Wikipedia (GoDaddy) + GoDaddy Blog (history) | 1997–2025 | B | 1997 founding, 2006 IPO, 2011 KKR/TCP take-private, 2015 NYSE re-IPO, NEA stake, ~6,500 employees |
-| G27 | BuiltWith usage statistics (via market-share sources) | 2025–26 | B | GoDaddy Builder ~0.7–0.9% of all sites and flat |
-| G28 | godaddy.com pricing pages + Airo announcement | 2025–26 | A | Starter $10/mo, Pro $20/mo, 1,000+ templates, Airo-powered builder at $0, launch copy |
-| G29 | Godaddy.com Airo product pages (credits, limits) | 2026 | A | 24/7 phone + chat, AI credits, site limits, publishing controls |
-| G30 | Hostinger-authored comparison (66% vs GoDaddy, 63% vs WP Engine) | 2026 | A(bias) | Quoted in the report **only** as an example of self-interested benchmarking |
+| G1 | **GoDaddy Q2 2026 Financial Results — Prepared Remarks** (Airo unification, $50M run-rate, Developer Platform, ANS/ARD, de-emphasis quote, guidance, buybacks) — `s23.q4cdn.com/406380394/files/doc_financials/2026/q2/GDDY-Q2-2026-Earnings-Prepared-Remarks.pdf` | Primary | 30 Jul 2026 | **A** |
+| G2 | GoDaddy Q2 2026 earnings press release (SEC Ex-99.1) — `sec.gov/Archives/edgar/data/1609711/000160971126000087/gddyex991-20260630xq2earni.htm` | Primary | 30 Jul 2026 | **A** |
+| G3 | GoDaddy Q4 2025 earnings call transcript (W+M migration "will take a few months", FY25 highlights) — `fool.com/earnings/call-transcripts/2026-04-22/godaddy-gddy-q4-2025-earnings-transcript/` | Transcript | 24 Feb / 22 Apr 2026 | **B** |
+| G4 | GoDaddy via 3BL — "Airo Accelerates… six new AI agents" (Conversations Inbox, Appointments, Domain Activation/Protection, DIFY) — `3blmedia.com/news/godaddy-accelerates-airoai-momentum-new-ai-agents-small-business-growth` | Primary (distributed) | 2 Dec 2025 | **A** |
+| G5 | GoDaddy via PRNewswire — **Airo.ai launch** (agent list, capabilities, Pani quote) — `prnewswire.com/news-releases/godaddy-brings-agentic-ai-to-small-businesses-with-launch-of-airoai-302614911.html` | Primary | 13 Nov 2025 | **A** |
+| G6 | Q2 2026 earnings-call digests (ARPU $250, 22k customers, bookings, margins) — `stocknow.ai/.../gddy_q2-2026-earnings-call`, `finance.yahoo.com/quote/GDDY/earnings/GDDY-Q2-2026-earnings_call-658570.html`, `finance.biggo.com/quote/GDDY/earnings-call/US_GDDY_2026-07-30` | Relay | 30–31 Jul 2026 | **C** |
+| G7 | 24/7 Wall St. — Q2 2026 reaction (EPS $1.83 vs $1.69; shares −7.67%) — `247wallst.com/cards/godaddy-inc-q2-2026-earnings-gddy-...` | Trade | 30 Jul 2026 | **B** |
+| G8 | Investing.com — "Q2 2026 slides: AI push drives results, market skeptical" — `in.investing.com/news/stock-market-news/godaddy-q2-2026-slides-...` | Trade | 30 Jul 2026 | **B** |
+| G9 | Investing.com conference transcripts — **Goldman Sachs Communacopia 2026** (9 Sept) and **Citi Global TMT 2026** (8 Sept): Airo cohort attach, "one platform", Developer Platform, ANS monetisation, care/eng efficiency, "launched Airo without hiring additional engineers" — `in.investing.com/news/stock-market-news/godaddy-at-goldman-sachs-communacopia--technology-conference-2026-ai-push-93CH-5586921`, `investing.com/news/transcripts/godaddy-at-citis-2026-global-tmt-conference-airo-drives-strategy-93CH-4892159` | Transcript | 8–9 Sept 2026 | **B** |
+| G10 | Marketing Dive — original Airo launch (Feb 2024), Smart Terminal voice queries, product catalogue generation — `marketingdive.com/news/godaddy-airo-generative-ai-tool-small-business-campaign/708453/` | Trade | 26 Feb 2024 | **B** |
+| G11 | checkthat.ai — GoDaddy pricing (renewal multipliers, 7-day window, bundle cost ladder, refund friction, dark patterns) — `checkthat.ai/brands/godaddy/pricing` | Aggregator | 22 Jun 2026 | **D** |
+| G12 | checkthat.ai — GoDaddy reviews (platform score table, support decay pattern) — `checkthat.ai/brands/godaddy/reviews` | Aggregator | 30 Mar 2026 | **D** |
+| G13 | Finsee / other Q2 2026 reviews (bull/bear framing, FCF, guidance) — `finsee.ai/earnings/gddy/2026/q2/en/` | Analyst-ish | 30 Jul 2026 | **B** |
+| G14 | Litmus Tools — GoDaddy Airo review 2026 (renewal doubling, no code export, generic output, upselling, Reddit sentiment) — `litmustools.com/review/godaddy-airo/` | Reviewer | 27 Jun 2026 | **B** |
+| G15 | HostAdvice — "GoDaddy Airo Pricing 2026" (three-layer Airo product structure, credit tiers, renewal deltas) — `hostadvice.com/hosting-company/godaddy-reviews/airo-pricing/` | Reviewer | 30 Aug 2026 | **B** |
+| G16 | HostAdvice — "What is GoDaddy Airo?" and "Is GoDaddy Airo worth it?" (test notes; support said free-with-domain Airo depends on promotions) — `hostadvice.com/blog/website-builders/website-building-with-ai/what-is-godaddy-airo/` | Reviewer | 24 Aug 2026 | **B** |
+| G17 | aibusinesssites — "GoDaddy Websites Pricing 2026: Real Costs & Hidden Fees" (full add-on stack, hosting renewals) — `aibusinesssites.com/compare/godaddy-websites-pricing-2026-real-costs-hidden-fees` | Vendor comparison | 10 Sept 2026 | **D** |
+| G18 | **FTC press release** — "FTC Takes Action Against GoDaddy for Alleged Lax Data Security" — `ftc.gov/news-events/news/press-releases/2025/01/...` | Primary regulator | 15 Jan 2025 | **A** |
+| G19 | WHtop — GoDaddy review page (10-year auto-renewal at $235 quote, control-panel complaints) — `whtop.com/review/godaddy.com` | Reviews | 2026 | **C** |
+| G20 | themeburn — GoDaddy AI website builder review (closed platform, "limiting") — `themeburn.com/blog/godaddy-ai-website-builder-review` | Reviewer | 1 Feb 2026 | **B** |
+| G21 | Tooltester — GoDaddy Website Builder review (incompatible version updates; forced rebuilds) — `tooltester.com/en/reviews/godaddy-website-builder-review/` | Reviewer | 7 Aug 2026 | **B** |
+| G22 | startupowl — GoDaddy domain registrar review (Trustpilot 4.5★/133,757; Reddit "expensive legacy registrar") — `startupowl.com/reviews/godaddy` | Aggregator | 25 Aug 2026 | **D** |
+| G23 | r/webdev — "GoDaddy Review, why you need to AVOID them!" (cancellation lockout, redemption fees, discount club, UX upsell, 19-year loyalty) — `reddit.com/r/webdev/comments/1jv8xez` | Forum | 14 Apr 2025 | **C** |
+| G24 | allaboutcookies — "GoDaddy Airo AI Review 2026: It's way better than I thought" + plan/renewal table — `allaboutcookies.org/godaddy-airo-review` | Reviewer | 7 Aug 2026 | **B** |
+| G25 | Compliance Week / NatLaw Review / Hunton / Parker Poe — FTC order **finalised 21 May 2025** (biennial assessments from 2026, 180-day program, no fine) — `complianceweek.com/regulatory-enforcement/ftc-orders-godaddy-to-upgrade-cybersecurity-defenses-following-three-breaches/36022.article` | Legal press | 22–24 May 2025 | **B** |
+| G26 | Arizona Republic — "FTC orders GoDaddy to upgrade online security" (nine incidents; GoDaddy response) — `azcentral.com/story/money/business/2025-01-15/ftc-orders-godaddy-to-upgrade-online-security/...` | Trade | 15 Jan 2025 | **B** |
+| G27 | saasflags — "Is GoDaddy a Scam or Legit?" (BBB auto-renew filings, marketing complaints) — `saasflags.com/products/godaddy/is-it-a-scam` | Aggregator | 20 May 2026 | **D** |
+| G28 | Trustpilot (godady.com mirror profile) — 2026 1★ verbatims (auto-renew, offline 4 days, refund refusals) — `trustpilot.com/review/godady.com` | Reviews | Dec 2025 – Jun 2026 | **C** |
+| G29 | ProductReview.com.au (p.3) — 2025–26 Australian SMB reviews (upsell, restore-service, $14→$440) — `productreview.com.au/listings/godaddy?page=3` | Reviews | 2025–26 | **C** |
+| G30 | ConsumerAffairs — GoDaddy reviews p.5 (9-year tenure decay, SSL billed 2 months early, 50-minute cancellation waits) — `consumeraffairs.com/internet/godaddy.html?page=5` | Reviews | 2025 | **C** |
 
-## Shopify — 41 sources
+## Shopify — 39 sources
 
-| ID | Source | Date | Tier | Used for |
+| ID | Source (what it was used for) | Type | Date | Tier |
 |---|---|---|---|---|
-| S1 | shopify.com/news/shopify-q2-2026-financial-results + SEC 8-K Ex-99.1 | 4–5 Aug 2026 | A | Q2 revenue $3.583B (+34%), GMV $115.567B (+32%), gross profit $1.708B (+29%), op income $488M (+68%), FCF $654M/18%, subscriptions +21% vs merchant solutions +37%, Q3 low-30s guidance, OpEx 33–34%, LVMH/Mulberry/Balmain/Orvis |
-| S2 | Shopify Q1 2026 press release (GlobeNewswire) + 10-Q | 5 May 2026 | A | Q1 $3.170B (+34%), GMV $100.743B, op income $382M, −$1.08B equity investment mark, 90%+ revenue from >1-yr merchants, ~$100M merchants up ~30%, Q2 outlook |
-| S3 | FY2025 results (Q4'25 8-K) + CapitalBET + LinkedIn/Flywheel commentary | Feb 2026 | A | FY25 revenue $11.556B (+30%), GMV $378.441B (+29%), ~$2B FCF at 17%, $2B buyback, FY25 op income ~$1.5B, Q4'25 $3.7B (+28%) |
-| S4 | Shopify Enterprise / Flexport partnership announcements | Jan 2026 | A | Official shipping-partner arrangement, Shopify Logistics units transferring to Flexport, enterprise "one control plane" framing |
-| S5 | CNBC (Shopify divests logistics to Flexport) | 4 May 2023 | A | Flexport took ~1,000 staff; Shopify received ~13% of Flexport — **the only verifiable Shopify–Flexport relationship** |
-| S6 | shopify.com/news/spring-26-edition-merchant (full) | 9 Jun 2026 | A | Catalog at 1B+ products default-on; Sidekick intelligence layer; Agentic Storefronts admin; search-intelligence query gaps; connectors Claude/ChatGPT/Perplexity/Manus/Replit/Vercel/Lovable; Catalog API + developer revenue share; free AI with no caps; new checkout; UCP with Google; Build with Claude; "12, 18, 20 things for the merchant"; "six to nine months into meaningful agentic commerce traffic patterns" |
-| S7 | Shopify newsroom: "Introducing Universal Commerce Protocol" | 4 Nov 2025 | A | Open standard, day-one agentic storefronts, checkout on ChatGPT, Claude, Perplexity, Google |
-| S8 | Shopify Eng blog — "How Shopify Built an Agentic Catalog on DynamoDB" | 2026 | A | Catalog engineering approach |
-| S9 | Shopify docs — "Update on Universal Commerce Protocol and Agentic Storefronts" | 2026 | A | Default-enablement of UCP for merchants |
-| S10 | Global Retail Developer Summit coverage (Shopify) | Jun 2026 | A | Catalog API + developer monetisation ("revenue share") |
-| S11 | stocktitan.net / finance.yahoo.com (Q1'26 summary) | 5 May 2026 | B | Sidekick 34M conversations, DAU +3.6× YoY, +8% of new merchants hitting 5 orders within 15 days, Q2 guide |
-| S12 | SEC filings via tradingnews / StockTitan / Insider Monkey | 2026 | A/B | ~2.86M live storefronts (Store Leads), ~$3B in agentic-influenced sales, AI-channel GMV doubling claim, Q2'25 +31% context, 10-Q figures |
-| S13 | theshopiflex.com (Plus migration guide) | 2026 | B | Plus $2,300+/mo, migration $2k–8k simple / $10k–30k complex, 2–4 vs 6–12 weeks, redirect mapping as SEO risk, app subscription creep, 0.25% fee saving at $100k/mo |
-| S14 | Craftybase + Reddit r/shopify (plan economics) | 2025–26 | B/C | Basic $29–39 / Grow $79 / Advanced $399–499, 0.5–2% gateway penalty, $150–400/mo realistic total, apps $50–200/mo, ~$300/mo audit threshold, 10.1% support ticket topic, 67% Payments penetration, $0.75 trial |
-| S15 | Reddit r/shopify (1pxv283) | 15 Sept 2025 | C | "It's expensive. That's the honest truth… every meaningful feature… either a paid app or a higher plan"; "gold standard for selling" |
-| S16 | Reddit r/shopify (1oj6k3q) | 19 Oct 2025 | C | Basic viable to ~$15k/mo, Grow beats it past ~$30k/mo, "Shopify fees… 2.9% + 30 cents" |
-| S17 | Reddit r/shopify (063783) | Apr 2025 | C | "Shopify is still way ahead of WooCommerce on app polish and support quality" |
-| S18 | Reddit r/shopify (Sidekick free) | 2026 | C | Sidekick free on all plans and generous vs per-token rivals |
-| S19 | BBB complaint narratives via easysellapp.com | 2026 | A(complaint text)/C | Stores restricted for "suspected illegitimate commerce", 365-day retention, admin access removed so chargeback evidence cannot be filed, $10,483.63 held, "no refund for the months we paid", bank details unchangeable |
-| S20 | easysellapp.com (retention-mechanics explainer) | 2026 | B | 120-day standard hold, up to 365-day suspected-illegitimate hold, >1% chargeback ratio trigger |
-| S21 | Trustpilot (Shopify) + reported BBB F rating (via aggregators) | 2026 | C | ~1.5★; caution: dominated by consumer-side (store) complaints |
-| S22 | Wikipedia (Shopify) | 2026 | B | 17,000+ apps, 100k+ partners, Shop Pay 150M+ users, GMV $236B in 2022 baseline, HQ Ottawa, founder Tobi Lütke |
-| S23 | Store Leads + BuiltWith (via market-share aggregators) | Q1–Q2 2026 | B/C | 2.86M live storefronts vs 5.2–6.9M domains, 47k Plus, 1,200–2,800 new storefronts/mo, ~1.1% QoQ growth |
-| S24 | uouengine.com (Shopify store revenue distribution) | 2026 | D | Only 13.95% of stores exceed $10k/month — long-tail concentration |
-| S25 | firstmoveloans.com (2026 stats) | 2026 | D | 30% YoY store growth cited |
-| S26 | Core-wave.com (AI stats) | 2026 | D | "AI traffic tripled, orders too; 10× increase in AI-assisted order value over 12 months" — **blog/analyst claim, not in filings; flagged in §10.3** |
-| S27 | 3DS Center (Google–Shopify agentic checkout) | 2026 | D | ">8,000 stores on UCP" — **not in any filing; flagged in §10.3** |
-| S28 | upknee.ai (renewal economics) | 2026 | D | Shopify Plus "20% higher renewal rates" — weak sourcing; directional only |
-| S29 | Reddit r/ecommerce (AI shopping 13× claim) | 2026 | C | Merchant-scepticism framing: "sounds like a LinkedIn success story" |
-| S30 | shopify.com/pricing | 2026 | A | Plan list, trial, "no hidden fees", AI credit positioning |
-| S31 | Shopify docs — pricing details, theme costs, Markets duties, Shopify Tax | 2026 | A | Transaction and processing rates, duties % per eligible order, per-transaction tax billing, theme pricing |
-| S32 | Shopify docs — Sidekick AI assistant | 2026 | A | Feature list (theme creation, bulk edits, SEO optimisation, custom app creation) |
-| S33 | Shopify Engineering — "Scaling Sidekick as an agentic assistant" | 2026 | A | Sidekick architecture and scale |
-| S34 | Shopify 2025 Letter to Shareholders | 2026 | A | Strategy and "Go all in on AI" framing |
-| S35 | Shopify newsroom — "Shopify and Google: Building the Agentic Commerce Standard" | 2025–26 | A | UCP co-development with Google |
-| S36 | SEC 8-K / 6-K filings (10-Q, 8-K exhibits) | 2025–26 | A | Reported financials, risk factor "relying on AI" |
-| S37 | SEC filing summaries via StockTitan / FinanceFeeds | 2026 | B | Q2'26 GMV/FCF confirmation, Q3 outlook |
-| S38 | GlobeNewswire — "Shopify Reaches $1 Trillion in Annual Online Sales" | Feb 2026 | A | FY2025 revenue $11.1B (+30%) framing, $1T cumulative/annual milestone messaging |
-| S39 | LinkedIn (Tobi Lütke) + @ShopifyDev | 2026 | B | Flexport stake/partnership framing; UCP adoption across ChatGPT, Gemini, Claude, Perplexity |
-| S40 | Shopify changelog (Dec 2025, Jan 2026) | 2025–26 | A | Sidekick custom app generation GA, Checkout Blocks on Plus, agentic storefront updates |
-| S41 | Q1'26 GlobeNewswire release (full text) | 5 May 2026 | A | Direct quotes on AI, agentic commerce, sidekick usage |
+| S1 | Shopify newsroom — **Q2 2026 results** (revenue $3.58B/+34%, GMV $115.6B/+32%, FCF margin 18%, "monster quarter" quote, risk disclosures) — `shopify.com/news/shopify-q2-2026-financial-results` | Primary | 5 Aug 2026 | **A** |
+| S2 | Shopify Q1 2026 press release (GlobeNewswire) — GMV $100.743B, MRR $212M, revenue $3.170B, op income $382M, FCF $476M — `globenewswire.com/news-release/2026-05-05/...` | Primary | 5 May 2026 | **A** |
+| S3 | Shopify newsroom — **Spring '26 Edition: 150+ updates** (Catalog by default, UCP, Agentic Storefronts admin, Catalog API, developer revenue share, B2B) — `shopify.com/news/spring-26-edition-merchant` | Primary | 17 Jun 2026 | **A** |
+| S4 | Retail TouchPoints / stellagent / ambaum — Q2 2026 AI metrics (3× traffic+orders, 2× conversion, +80% vs organic, 75% long tail, 34M Sidekick conversations, +3.6× DAU) — `retailtouchpoints.com/news/shopify-credits-ai-for-34-revenue-growth-in-q2-2026/620805/`, `stellagent.ai/insights/shopify-q2-2026-ai-search-traffic-3x` | Trade | 5–12 Aug 2026 | **B** |
+| S5 | Seeking Alpha — Q2 2026 call notes (Q3 low-30s outlook, no new agentic fees, FCF margin trajectory) — `seekingalpha.com/news/4626580-...` | Relay | 5 Aug 2026 | **C** |
+| S6 | Ambaum Insights — merchant takeaways incl. the metafield/Catalog API limitation — `ambaum.com/insights/shopify-q2-2026-earnings-ai-takeaways` | Analyst note | 12 Aug 2026 | **B** |
+| S7 | Trustpilot — Shopify (payout holds, verification loops, consumer-side complaints, "no buyer protection") — `trustpilot.com/review/www.shopify.com` and `uk.trustpilot.com/review/www.shopify.com?page=7` | Reviews | Jun–Aug 2026 | **C** |
+| S8 | **BBB complaints — Shopify Inc.** (restricted stores + 365-day hold; $12,000 locked payout; Shopify Balance freeze; cancelled-subscription billing) — `bbb.org/ca/on/ottawa/profile/online-shopping/shopify-inc-0117-39813/complaints` | Filings | Aug 2026 | **A** |
+| S9 | Finsee — Q2 2026 segment/margin analysis (merchant solutions $2.78B, mix shift, guidance table) — `finsee.ai/earnings/shop/2026/q2/en/` | Analyst-ish | 5 Aug 2026 | **B** |
+| S12 | thefrontkit — "Shopify Alternatives 2026" (the "quiet costs stack" quote, per-platform annual cost table) — `thefrontkit.com/blogs/shopify-alternatives-2026` | Reviewer/vendor | 21 Aug 2026 | **D** |
+| S13 | letstalkshop — "Sidekick vs Magic 2026" (no usage caps yet; custom app generation gated to Grow+) — `letstalkshop.com/blog/shopify-sidekick-vs-shopify-magic` | Reviewer | 21 Apr 2026 | **B** |
+| S14 | Newsfile / Shopify — "Standout 2025" wrap (B2B +96%, offline +27%, international +36–37%, $2B buyback, FCF margins) — `newsfilecorp.com/release/283507/...` | Primary (distributed) | 11 Feb 2026 | **A** |
+| S15 | Yahoo Finance — Q1 2026 call summary (equity-investment distortion, guidance) — `finance.yahoo.com/markets/stocks/articles/...` | Relay | May 2026 | **C** |
+| S16 | Yahoo Finance — Q2 2026 call summary ("AI leverage", distillation, Q3 FCF high-teens–low-20s) — `finance.yahoo.com/markets/stocks/articles/shopify-inc-q2-2026-earnings-225333121.html` | Relay | 5 Aug 2026 | **C** |
+| S17 | businessmodelanalyst — Shopify SWOT 2026 (disintermediation paradox, take rate, GAAP noise, long tail) — `businessmodelanalyst.com/shopify-swot-analysis/` | Analyst | 24 Jul 2026 | **B** |
+| S18 | axis-intelligence — Shopify statistics 2026 (Plus 47k stores, $100M+ merchants doubling, LVMH/Mulberry/Balmain/Orvis) — `axis-intelligence.com/shopify-statistics/` | Aggregator | 2 Jul 2026 | **D** |
+| S19 | justpricing / datarefs / ecommercetrix — store counts, Payments penetration, US share, store-revenue distribution — `justpricing.com/shopify-statistics`, `datarefs.com/statistics/ecommerce/shopify/`, `ecommercetrix.com/ecommerce-statistics/shopify-statistics/` | Aggregator | Jul 2026 | **D** |
+| S20 | webtonic — store counts and Q2-26 1.1% QoQ growth — `webtonic.io/blog/e-commerce-shopify-statistics` | Aggregator | 21 Jul 2026 | **D** |
+| S21 | digitalapplied / sitebuilderreport / uithings — performance, CWV, implementation time, market share — `digitalapplied.com/blog/shopify-statistics-2026-platform-growth-data`, `sitebuilderreport.com/website-builder-statistics`, `uithings.com/website-builder-statistics` | Aggregator | 2026 | **D** |
+| S22 | 24/7 Wall St. — valuation, Shopify Capital losses, stock moves — `247wallst.com/investing/2026-04-10/shopify-eyes-18-upside-after-sharp-2026-selloff/` | Trade | 10 Apr 2026 | **B** |
+| S23 | tradingkey — SHOP Sep 2026 move + company-specific risk list (gross margin −230bps, multiple, LLM commerce competition) — `tradingkey.com/news/market-movers/262163758-market-movers-shop-20260911` | Trade | 11 Sept 2026 | **B** |
+| S24 | digitalapplied — Q2-26 "claim ledger": which AI stats are in the press release / 10-Q vs call-only, incl. the ~8,000 UCP-store tracker and the Q1 "13× orders" baseline — `digitalapplied.com/blog/shopify-q2-2026-results-ai-orders-agentic-commerce` | Analyst | 8 Aug 2026 | **B** |
+| S25 | Investing.com — Shopify at Goldman Sachs Communacopia 2026 (Hoffmeister/Abrams on admin "pane of glass", LLM costs, disintermediation Q&A) — `ng.investing.com/news/stock-market-news/shopify-at-goldman-sachs-conference-ai-may-widen-its-merchant-moat-93CH-2692452` | Transcript | 10 Sept 2026 | **B** |
+| S26 | adsx — "Shopify Magic & Sidekick AI in 2026" (free on all plans; Magic output quality; Sidekick can act with confirmation) — `adsx.com/blog/shopify-magic-sidekick-ai-features-2026` | Reviewer | 12 Mar 2026 | **B** |
+| S27 | Supply Chain Dive / FreightWaves / AP — Shopify **sold** Shopify Logistics + Deliverr to Flexport (May 2023, 13% stake), Flexport as official logistics partner for Shop Promise — `supplychaindive.com/news/shopify-sell-logistics-business-flexport-deliverr/649427/` | Trade | May 2023 (verified 2026) | **B** |
+| S28 | TechnologyAdvice — Shopify review 2026 (plan range, transaction fee mechanics, cons: reporting gating, free themes, user-feedback themes) — `technologyadvice.com/blog/sales/shopify-review/` | Reviewer | 22 Jan 2026 | **B** |
+| S29 | TrueProfit — Shopify fees calculator 2026 (realistic monthly totals by store size) — `trueprofit.io/blog/shopify-fees-calculator` | Vendor/reviewer | 30 Jun 2026 | **D** |
+| S30 | wearepresta — TCO + "Basic trap" analysis, migration cost table ($2k–$30k, 2–12 weeks) — `wearepresta.com/woocommerce-hosting-costs-vs-shopify-pricing-which-wins-in-2026/` | Agency | 28 Jul 2026 | **D** |
+| S31 | brandid / rovela / alidropship — "real monthly cost" tables and alternatives positioning — `brandid.app/blog/best-shopify-alternatives`, `rovela.ai/blog/best-shopify-alternatives` | Vendor comparison | Jul 2026 | **D** |
+| S32 | bootstrappingecommerce — 7-year testing; POD/dropshipping fee pain; app-spend audit advice — `bootstrappingecommerce.com/shopify-pricing/` | Reviewer | 20 Jan 2026 | **B** |
+| S33 | technologyadvice + S28 cons list; letstalkshop gating notes | Reviewer | 2026 | **B** |
+| S34 | startupowl — Shopify review 2026 (Trustpilot 1.5★/4,325, BBB F/1,661 complaints "as reported", support test results, Reddit sentiment) — `startupowl.com/reviews/shopify` | Aggregator | 20 Feb 2026 | **D** |
+| S35 | r/shopify — "Leaving Shopify" ($900 billing error, no phone support, payment-ban scepticism, theme/UX complaints) — `reddit.com/r/shopify/comments/1tddu80/leaving_shopify` | Forum | 14 May 2026 | **C** |
+| S36 | easysellapp — "Shopify Store Suspended? How to Appeal" (120/365-day holds, >1% chargeback threshold, no admin after termination) — `easysellapp.com/blogs/wiki/shopify-store-suspended-appeal-recover` | Reviewer/guide | 22 Apr 2026 | **B** |
+| S37 | Shopify Q2 2026 release — named forward-looking risks (tariffs, trade measures, AI adoption, third-party reliance, cyberattack) | Primary | 5 Aug 2026 | **A** |
+| S38 | Seeking Alpha — Q1 2026 outlook notes (de minimis removal, trade regimes, mitigation) — `seekingalpha.com/news/4550530-...` | Relay | 11 Feb 2026 | **C** |
+| S39 | Medusa/Saleor/Ecwid/BigCommerce alternatives rows in S12/S31 | Vendor comparison | Jul 2026 | **D** |
+| S40 | Trustpilot UK p.7 — "$250 charge with no notice while account inaccessible; refund denied under internal 7-day policy" (ACL/ACCC escalation) | Reviews | 25 Jun 2026 | **C** |
+| S41 | r/ecommerce — "I know everyone recommends Shopify, but are there other good ecommerce platforms?" (BigCommerce/Woo comparisons) — `reddit.com/r/ecommerce/comments/1sua704` | Forum | 24 Apr 2026 | **C** |
 
 ## Cross-vendor and market context — 7 sources
 
-| ID | Source | Date | Tier | Used for |
+| ID | Source | Type | Date | Tier |
 |---|---|---|---|---|
-| X1 | sitebuilderreport.com (market share) | 2025–26 | B | 15.8M tracked websites; WordPress ~40% of all sites / ~60% of CMS; Shopify 5.2%, Wix 4.3% (+32.6%), Squarespace 2.5%, Weebly −15% |
-| X2 | w3techs.com | 2026 | B | Wix/Squarespace/Shopify ~4% each, WordPress ~60% of CMS |
-| X3 | colorlib.com | 2026 | B | Shopify 7.5% of all websites (record) vs 4.7% Jan 2025 |
-| X4 | hostingadvice.com | 2026 | B | Shopify ~14% of US e-commerce GMV |
-| X5 | statista.com | 2025 | B | Shopify ~8.2% US e-commerce share vs Amazon ~35.7% |
-| X6 | brightcoding.com (hosting complaints 2026) | 2026 | C/D | Renewal price shock as the #1 complaint category-wide ("renewal revolt"); HostGator/Bluehost "renewal price hit me like a train" |
-| X7 | Hostinger, GoDaddy and HostGator Trustpilot aggregate comparisons (via aggregator D-tier sites) | 2026 | D | 96% vs 94% uptime, <1s vs 2–3s — **not independently audited; excluded from conclusions** |
+| X1 | Site Builders Report — website-builder market share and YoY growth (Wix, Squarespace, GoDaddy, Weebly, Shopify share of all sites) | Aggregator | 2025–26 | **D** |
+| X2 | W3Techs — technology usage statistics: WordPress ~40% of all websites, ~59–60% of the CMS market | Measurement | rolling 2026 | **B** |
+| X3 | Colorlib / hostingadvice — website and CMS statistics; Shopify at a record 7.5% of all websites vs 4.7% in Jan 2025 | Aggregator | 2026 | **D** |
+| X4 | Market-share trackers as relayed by digitalapplied and sitebuilderreport (builder-vs-platform splits, ~26% Shopify vs 18% WooCommerce e-commerce platform share) | Aggregator | 2026 | **D** |
+| X5 | DigitalApplied — "Shopify Statistics 2026" (page-load performance, Core Web Vitals pass rates, enterprise implementation timelines) | Aggregator | 2026 | **D** |
+| X6 | E-commerce platform-share trackers (Shopify vs WooCommerce vs Amazon share, US e-commerce GMV ~14% for Shopify) | Aggregator | 2025–26 | **D** |
+| X7 | BrightCoding — "Website Hosting Complaints 2026" (renewal price shock as the #1 category complaint, "the renewal revolt", Bluehost/HostGator/Newfold switching fatigue, generic renewal verbatim) | Blogger | 2026 | **D** |
 
----
 
-## Known gaps in this research
+## Numbering
 
-1. **Shopify store counts conflict** — 2.86M (Store Leads, "live storefronts") vs 5.2–6.9M (BuiltWith, domains detected). Both are in the report; the metric definitions differ and neither is official.
-2. **Review-volume figures for the same platform vary** by filter and date (Trustpilot Hostinger 13.8k vs 61.5k; GoDaddy 128k vs 134k). Treated as orders-of-magnitude.
-3. **Credit top-up pricing for Hostinger is inconsistent** across two independent reviews ($4.99/10 vs $19.99/50 for the "recommended" pack). Listed as a range with low confidence.
-4. **GoDaddy builder renewal prices are not published** — reviewer-reported and region-dependent.
-5. **The most-cited Shopify agentic-commerce claims** ("tripled AI traffic and orders", ">8,000 UCP stores", "10× order value growth", "13× AI-referred orders in Q1") are **not in the press release or 10-Q** — they trace to company blog and secondary commentary. Flagged wherever used.
-6. **No primary-source data on Shopify payout-hold volumes** — only individual BBB complaints, so the report describes mechanics and cites the complaints rather than estimating incidence.
-7. **Hostinger's 99.99% uptime claim** is self-measured and not independently audited, including the SLA validation using its own monitoring platform.
-8. **Customer quotes are excerpts**, not the full threads. Each includes a username and a link back to the original. Read the thread before acting on a quote.
-9. Everything here is **US-list pricing in a single snapshot** — all three vendors run regional pricing, promotions, and seasonal offers.
-10. **Nothing in this directory is a substitute for a current terms check.** Before any customer signs, the live contract governs: refund windows, renewal multipliers, export rights and enforcement policies change, and the two most consequential 2025–26 changes (GoDaddy's refund cut, Shopify's paid-theme commission shift) were both announced with little notice.
+IDs are stable, not sequential-perfection: **S10 and S11 were retired** during drafting (two sources dropped for insufficient rigour) and the Shopify table jumps from S9 to S12 so that citations already written into `REPORT.md` stay valid. All other ranges are complete: H1–H26, G1–G30, S1–S41 (minus S10, S11), X1–X7.
+
+## How to re-verify a claim fast
+
+| If you want to check… | Go to |
+|---|---|
+| Any GoDaddy strategy number ($50M run-rate, A&C margin, de-emphasis of template builders) | `G1` — the Q2 2026 Prepared Remarks PDF; the quote is verbatim from the CEO's opening |
+| Any GoDaddy/Shopify financial figure | `G2` / `G3` (SEC Ex-99.1 exhibits) and `S1` / `S2` |
+| Hostinger growth, customer counts, Horizons/Reach traction | `H1` (company FY2025 results post) |
+| Hostinger AI Builder / Agent mechanics, paid-agent-tier claim | `H3` and `H4` (the two launch posts) |
+| Shopify's agentic-commerce roadmap (Catalog, UCP, Agentic Storefronts, Catalog API, revenue share) | `S3` — the Spring '26 Edition merchant post |
+| Whether a flashy Shopify AI stat is actually reported | `S24` — the "claim ledger" that separates filed numbers from call/blog claims |
+| Any customer verbatim | The `C`-tier row cited next to it contains the exact thread or review page |
+| FTC / regulatory framing | `G18` (agency release) and `G25` (final order analysis) |
+
+## Known gaps and caveats in this research
+
+1. **Shopify storefront counts conflict by design.** ~2.86M ("live storefronts", via `S19`) vs 5.2–6.9M ("domains detected", `S19`/`S21`). Neither is an official disclosure; the report shows both and says which metric each figure uses.
+2. **Review-volume and score figures vary by filter and date** for the same platform (Hostinger Trustpilot appears at 13.8k and 61.5k; GoDaddy at ~128k–134k). Treated as orders of magnitude, never as a precise count.
+3. **Hostinger credit top-up pricing is inconsistent** between two independent reviews ($4.99/10 vs $19.99/50 for the "recommended" pack) — printed as a range with a low-confidence flag.
+4. **GoDaddy website-builder renewal prices are not published**; the figures used are reviewer-reported and region-dependent (`G11`–`G17`).
+5. **The most-quoted Shopify agentic-commerce statistics are not in the filing.** "AI traffic and orders tripled", "~8,000 UCP stores", "10× AI-assisted order value", "13× AI-referred orders in Q1" trace to the company blog, the earnings call and secondary commentary (`S4`–`S6`, `S24`) — flagged at every use, and excluded from anything load-bearing.
+6. **No primary data on Shopify payout-hold incidence.** Only individual BBB complaints (`S8`) and reviewer-documented policy (`S36`), so the report describes mechanics and cites the complaints rather than estimating how often holds happen.
+7. **Hostinger's 99.99% uptime claim is self-measured,** including the SLA validated on Hostinger's own monitoring (`H19`, report §3.5). The competitor-downtime claims in `H24`/`H23` are Hostinger-authored and are not used in the conclusions.
+8. **Customer quotes are excerpts, not full threads.** Every one names the reporter and links back (`H13`–`H18`, `G23`–`G30`, `S7`–`S8`, `S35`, `S40`, `S41`). Read the thread before repeating a quote externally.
+9. **Single-snapshot, US-list pricing.** All three vendors run regional pricing, promotions and seasonal offers; `PRICING-TCO.csv` is dated `captured_on` for exactly this reason.
+10. **Nothing here replaces a current terms check.** The two most consequential changes of the last 18 months — GoDaddy cutting its refund window from 30 days to 7 (`G11`) and Shopify shifting paid-theme commission structure (`S3`) — were both announced with little notice. Live contract governs, always.

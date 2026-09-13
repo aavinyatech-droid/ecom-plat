@@ -1,0 +1,46 @@
+company,product_or_plan,item_type,entry_price_usd,entry_billing_term,renewal_price_usd,monthly_bill_price_usd,platform_txn_fee,card_processing_usd,notes,captured_on,confidence
+Hostinger,Premium web hosting / AI Builder,plan,2.99,48 months prepaid,10.99,11.99,0.0%,-,"3 sites, weekly backups, 20 entry processes, 5 AI build credits, free domain yr 1, no ecommerce",2026-09,medium
+Hostinger,Business web hosting / AI Builder,plan,3.99,48 months prepaid,16.99,18.99,0.0%,-,"Unlimited sites, daily backups, staging, ecommerce to 1000 products, 30 entry processes, 15 build + 500 agent credits, Reach included",2026-09,medium
+Hostinger,Cloud Startup,plan,7.99,48 months prepaid,25.99,,-,,"Higher resources, 40 entry processes, priority support, 1000 agent credits",2026-09,medium
+Hostinger,12-month Premium / Business,plan,3.99 / 4.99,12 months,-,,,,Same plans at higher monthly-equivalent without the multi-year lock,2026-09,medium
+Hostinger,Horizons / AI Builder app tiers,plan,6.99 / 9.99-13.99 / 29.99-39.99 / 59.99-79.99,annual,-,,,,Explorer/Starter/Hobbyist/Hustler; 30/70/200/400 AI credits; code editor + ZIP export from Hobbyist only,2026-09,medium
+Hostinger,AI credit top-ups,add-on,4.99,one-time,299.99,,-,,10 credits $4.99 to 1000 credits $299.99; 50 credits $19.99 marked recommended; unused credits do not roll over; one reviewer ran out mid-project,2026-09,low
+Hostinger,Managed WordPress,plan,2.99-7.99,12-48 months,10.99-25.99,,,,"Mirrors shared tiers plus onboarding, migration, staging, auto-updates, AI content",2026-09,medium
+Hostinger,VPS KVM,plan,4.99-59.99,monthly/annual,same 2-3x renewal pattern,,,,Shared vCPU; sustained-load throttling/restriction reported (75% and 20% CPU cases),2026-09,medium
+Hostinger,Hostinger Mail,add-on,0.99,per mailbox per month,-,,,,1GB mailbox caps reported on included tiers,2026-09,low
+Hostinger,.com domain,add-on,4.99,first year,17.99-21.99,,-,,96-hour refund window on domains; renewals never refundable; dynamic renewal pricing reported,2026-09,medium
+Hostinger,Uptime SLA,policy,-,-,-,,-,,99.9% network availability only; ~5% one-month fee credit; must claim within ~30 days; validated with Hostinger's own monitoring data,2026-09,medium
+Hostinger,Refund policy,policy,-,30 days,-,,,,30 days hosting/cloud/VPS/email; domains 96 hours; crypto non-refundable; refunds default to account store credit unless requested,2026-09,medium
+Hostinger,Support model,policy,-,-,-,,,-,Chat 24/7 only; no phone; no default ticket queue; email 24-72h; specialised agentic work now a paid tier (Hostinger Agent),2026-09,high
+GoDaddy,Website Builder Basic,plan,9.99,annual,16.99,,0.0%,-,"Custom domain, SSL, basic SEO, Airo content help; no free domain bundled",2026-09,medium
+GoDaddy,Website Builder Premium,plan,14.99,annual,29.99,,,-,Adds appointment scheduling,2026-09,medium
+GoDaddy,Website Builder Commerce,plan,20.99,annual,34.99,,0.0%,2.7% + 0.30,Unlimited products; zero percent platform fee; GoDaddy Payments,2026-09,medium
+GoDaddy,Free website plan,plan,0.00,permanent,-,,-,,GoDaddy branding + subdomain; useful as a demo only,2026-09,medium
+GoDaddy,Web hosting Economy/Deluxe/Ultimate,plan,5.99/7.99/21.99,3-year term,11.99/16.99/higher,,,,Economy = 1 website; cPanel-based tiers; free tier of some promos on non-core hosting,2026-09,medium
+GoDaddy,Managed WordPress,plan,6.99/9.99/14.99,annual,14.99/19.99/26.99,,,,Airo toolkit bundled; Airo for WordPress launched 11 May 2026,2026-09,medium
+GoDaddy,.com domain,add-on,4.99,first year,21.99-22.99,,-,,Promos as low as $0.01; renewal multiplier ~+2100%; domain privacy sold as add-on,2026-09,high
+GoDaddy,Airo Plus,add-on,4.99,annual ($59.88),7.99 ($95.88),,,-,"AI image generation, marketing consultant, SEO optimiser; the more capable AI is the paid one",2026-09,medium
+GoDaddy,Airo AI Builder Free/Starter/Professional/Ultimate,plan,0/9.99/24.99/99.99,annual,0/14.99/36.99/149.99,19.99/49.99/199.99,,-,50/150/300/750 credits per month; 1/1/10/50 published sites; free tier builds but cannot publish; code download supported,2026-09,medium
+GoDaddy,Email Essentials (Microsoft 365),add-on,1.99,per mailbox per month,higher,,,,Backup $1.99/mo and archiving $4.99/mo sold separately,2026-09,medium
+GoDaddy,SSL certificate,add-on,5.99,3-year term,-,,,,Free with select WordPress plans only,2026-09,medium
+GoDaddy,Pro Site Maintenance,add-on,1.99,annual,6.99 (Pro for 5 sites),,,,Maintenance packs are a separate upsell line,2026-09,medium
+GoDaddy,Refund policy,policy,-,7 days,-,,,,Reduced from 30 days in February 2025; applied to multi-year renewals; auto-renew on by default,2026-09,high
+GoDaddy,Support model,policy,-,-,-,,,-,"24/7 phone + chat; reported degradation after year 1 (30-60+ min waits, script answers, upselling during support)",2026-09,medium
+GoDaddy,Bundled-cost worked example,policy,332.62,year 1,433.62 (yr 2-3); 537.62 (yr 4+),,,,Typical small-business bundle: domain + economy hosting + builder basic + SSL + basic security,2026-09,low
+Shopify,Starter,plan,5.00,monthly,-,-,2.0%+,-,Sell via links and social; not a full storefront,2026-09,medium
+Shopify,Basic,plan,39.00,monthly (29 annual),-,,2.0% (non-Shopify Payments),2.9% + 0.30,Highest fee tier; viable to ~$15k/mo before upgrading is cheaper; 2 staff accounts,2026-09,medium
+Shopify,Grow,plan,105.00,monthly (79-99 annual),-,,1.0%,2.6-2.7% + 0.30,Some comparisons list ~$65-79 depending on region/term; usually beats Basic past ~$30k/mo,2026-09,low
+Shopify,Advanced,plan,399.00,monthly (299 annual),-,,0.5-0.6%,2.5% + 0.30,"Advanced reports, duties, custom apps territory",2026-09,medium
+Shopify,Plus / Enterprise,plan,2300.00+,negotiated (revenue-linked),-,,negotiated,negotiated,"Checkout control, expansion stores; ~47k Plus stores",2026-09,medium
+Shopify,In-person (POS) processing,fee,2.4-2.5% + 0.10,per transaction,-,,,,Included rates vary by plan and region,2026-09,medium
+Shopify,Markets / duties / FX,fee,0.5-0.85% per eligible order (Shopify Payments) ~1.5% via third-party,per order,-,,,,Cross-border administration fee on top of processing,2026-09,medium
+Shopify,Shopify Tax,fee,per taxable transaction,usage,-,,,,Added to the subscription invoice,2026-09,medium
+Shopify,Apps,add-on,10-50 each typical; 50-200/mo total,monthly,-,,,,Guidance from reviewers: audit if over $300/mo because Shopify now includes some of it free,2026-09,medium
+Shopify,Theme,add-on,0-350 one-time,-,-,-,-,-,900+ themes; few strong free options,2026-09,medium
+Shopify,AI (Magic + Sidekick),included,0.00,included on every plan,,,-,,No token or credit caps as of Winter '26 Edition; Sidekick custom-app generation gated to Grow+,2026-09,high
+Shopify,Migration cost out,policy,2000-8000 simple / 10000-30000 complex,one-time,-,,,,2-4 weeks simple; 6-12 weeks complex; redirect mapping is the SEO risk line,2026-09,medium
+Shopify,Funds risk policy,policy,120 days standard; up to 365 days suspected illegitimate commerce,reserve period,,,,,Chargeback ratio >1% flagged; admin access removed on termination so chargeback evidence cannot be submitted; bank details cannot be updated after termination,2026-09,high
+Scenario,Brochure site (5 pages + email; <10k visits/mo); 5-year total,tco,650 (Hostinger) / 850-1100 (GoDaddy) / 2340+ (Shopify),5 years,,,,,Hostinger 4yr prepaid $143.52 then $10.99 renewal; GoDaddy adds email/SSL; Shopify is the wrong tool for this job,2026-09,medium
+Scenario,Small store (100-500 SKUs; ~$10k/mo GMV); 5-year total,tco,1100-1500 (Hostinger) / 5500-6000 (GoDaddy) / 10000-12000 (Shopify),5 years,,,,,"Most of the GoDaddy and Shopify gap is payment processing, not subscription",2026-09,medium
+Scenario,Scaling brand ($1-5M/yr; BFCM; international); annual cost,tco,"0 (VPS+Woo, self-managed) / n-a (GoDaddy) / 8000-25000 (Shopify)",annual,,,,,Hostinger path is cheapest on paper and most expensive in incidents; Plus is $2300+/mo for checkout control,2026-09,low
+All,Renewal-shock range for context,benchmark,+167% to +550% (Hostinger) / +62% to +2100% (GoDaddy) / feature+gateway penalties (Shopify),-,,,,,Cross-brand category analysis: renewal price shock is the single most common complaint across budget hosts,2026-09,medium
